@@ -12,9 +12,13 @@ Example usage:
     
     print(number_of_subscribers("python"))  # Outputs the number of subscribers for r/python
     print(number_of_subscribers("nonexistingsubreddit12345"))  # Outputs 0 for a non-existing subreddit
+
+Function:
+    - number_of_subscribers(subreddit)
 """
 
 import requests
+
 
 def number_of_subscribers(subreddit):
     """
@@ -39,7 +43,8 @@ def number_of_subscribers(subreddit):
     except requests.RequestException:
         return 0
 
+
 # Example usage:
 if __name__ == "__main__":
-    print(number_of_subscribers("python"))  # Replace "python" with any subreddit name
-    print(number_of_subscribers("nonexistingsubreddit12345"))
+    print(number_of_subscribers("python"))  # Outputs the number of subscribers for r/python
+    print(number_of_subscribers("nonexistingsubreddit12345"))  # Outputs 0 for a non-existing subreddit
